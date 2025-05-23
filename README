@@ -1,0 +1,33 @@
+# Notepad 📝
+
+**Notepad** is a simple and intuitive note-taking web application that combines the functionality of traditional notepads with to-do list features. Designed for efficiency and ease of use, it helps users stay organized whether they’re jotting down quick notes or managing tasks.
+
+## Why I Built It
+
+I created Notepad to improve my front-end development skills while building something practical and useful. I wanted a lightweight, distraction-free tool that could serve as both a simple notepad and a task manager. This project allowed me to explore UI design with Tailwind CSS and reinforce my JavaScript knowledge through real-world functionality.
+
+## Features
+
+- 🗒️ Create and manage notes
+- ✅ Organize tasks with to-do lists
+- 💡 Clean and responsive user interface
+
+## Built With
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Live Demo
+
+👉 [Try Notepad Now](https://lemiprogram.github.io/notepad)
+
+## Getting Started
+
+There are no specific installation instructions. Simply clone the repository and open the `index.html` file in your browser.
+
+```bash
+git clone https://github.com/lemiprogram/notepad.git
+cd notepad
+open index.html
