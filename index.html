@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoughtful Thoughts</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="colors.css">
 </head>
 <body>
     <header class="flex justify-between">
-        <div class="logo">Thoughtful Thoughts</div>
-        <div class="header-nav flex">
-            <div class="nav-item home">Home</div>
+        <div class="logo grid place-content-center text-2xl">Thoughtful Thoughts</div>
+        <div class="header-nav hidden sm:flex">
+            <div class="nav-item focus-nav home">Home</div>
             <div class="nav-item tools">Tools</div>
             <div class="nav-item log-out">Log Out</div>
         </div>
+        <div class="menu sm:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+        </div>
     </header>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,24 @@
+:root{
+    --primary-100:#7D6CBF;
+    --primary-200:#ae9af2;
+    --primary-300:#fffeff;
+    --accent-100:#A68EDD;
+    --accent-200:#47367b;
+    --text-100:#FFFFFF;
+    --text-200:#e0e0e0;
+    --bg-100:#2C264F;
+    --bg-200:#3d3660;
+    --bg-300:#574e7b;   
+}
+body{
+    background-color: var(--bg-100);
+}
+div{
+    color:var(--text-100);
+}
+header{
+    background-color: var(--bg-200);
+}
+.focus-nav{
+    border-color: var(--primary-300);
+}
