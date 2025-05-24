@@ -1,3 +1,4 @@
+const headerNav = document.querySelector(".header-nav")
 const navItems = document.querySelectorAll(".header-nav .nav-item")
 const [homeNav] = navItems
 const navItemsArr = Array.from(navItems)
@@ -24,3 +25,12 @@ navItemsArr.forEach(item=>
     })
 )
 document.querySelector(".logo").addEventListener("click",()=>{changeNavItems(homeNav)})
+document.querySelector(".menu").addEventListener("click",()=>{
+    toggleMyClass("res-nav",headerNav)
+})
+window.onclick = event=>{
+    if(event.target === headerNav){
+        toggleMyClass("res-nav",headerNav)
+        
+    }
+}

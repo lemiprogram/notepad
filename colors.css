@@ -9,6 +9,7 @@
     --bg-100:#2C264F;
     --bg-200:#3d3660;
     --bg-300:#574e7b;   
+    --faded-bg:#0000006d;
 }
 body{
     background-color: var(--bg-100);
@@ -21,4 +22,16 @@ header{
 }
 .focus-nav{
     border-color: var(--primary-300);
+}
+.menu svg{
+    fill: var(--primary-300);
+}
+.nav-items{
+    background-color: var(--bg-200);
+}
+@media only screen and (max-width:642px){
+    .header-nav{
+        background-color: var(--faded-bg);
+    }
+    
 }

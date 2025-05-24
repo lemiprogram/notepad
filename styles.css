@@ -10,12 +10,40 @@
     padding: 20px 20px;
     cursor: pointer;
 }
+.logo{
+    font-size: 1.3em;
+}
+.logo, .nav-item{
+    display: grid;
+    place-content: center;
+}
 .focus-nav{
     border-bottom: 2px solid;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-radius: 7px;
 }
-
+.menu{
+    display: none;
+}
+@media only screen and (max-width:642px){
+    .header-nav{
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        flex-direction: column;
+    }
+    .nav-items{
+        flex-direction: column;
+        height: 100%;
+        width: 120px;
+        gap: 60px;
+    }
+    .res-nav{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+}
 svg{
     width: 20px;
 }
