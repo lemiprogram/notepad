@@ -19,19 +19,42 @@ div{
 }
 header{
     background-color: var(--bg-200);
+    box-shadow: 1px 1px 9px 0px var(--faded-bg);
 }
-.focus-nav{
+.focus-header-nav{
     border-color: var(--primary-300);
 }
-.menu svg{
+svg{
     fill: var(--primary-300);
 }
 .nav-items{
     background-color: var(--bg-200);
+}
+.nav-item{
+    color: var(--text-200);
+    fill: var(--text-200);
+}
+.nav-item:is(:hover,:focus,:focus-within) :is(div,svg), .nav-item:is(:hover,:focus,:focus-within){
+    color: var(--primary-100);
+    fill: var(--primary-100);
+
 }
 @media only screen and (max-width:642px){
     .header-nav{
         background-color: var(--faded-bg);
     }
     
+}
+.sidebar{
+    background-color: var(--bg-200);
+    z-index: -1;
+    box-shadow: 1px 1px 6px 0px var(--faded-bg);
+
+}
+.sidebar svg{
+    fill: var(--text-100);
+    width: 25px;
+}
+.home-nav .heading{
+    color: var(--accent-100);
 }

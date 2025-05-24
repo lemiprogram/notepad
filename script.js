@@ -16,8 +16,8 @@ function addMyClass(myClass, el){
 
 }
 function changeNavItems(el){
-    navItemsArr.filter(item=>item !== el).forEach(item=>removeMyClass("focus-nav",item))
-    addMyClass("focus-nav",el)
+    navItemsArr.filter(item=>item !== el).forEach(item=>removeMyClass("focus-header-nav",item))
+    addMyClass("focus-header-nav",el)
 }
 navItemsArr.forEach(item=>
     item.addEventListener("click",(e)=>{
