@@ -1,6 +1,6 @@
 
 .sticky-note{
-    min-width: 270px;
+    width: 270px;
     height: 300px;
     position: absolute;
     top: 0;
