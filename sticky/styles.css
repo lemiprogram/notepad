@@ -1,7 +1,13 @@
-
+:root{
+    --corner-thicknes:10px;
+    --edge-length:100%;
+    --edge-thickness:10px;
+}
 .sticky-note{
     width: 270px;
     height: 300px;
+    min-width: 200px;
+    min-height: 240px;
     position: absolute;
     top: 0;
     right: 10px;
@@ -12,8 +18,11 @@
 }
 .sticky-note .header{
     width: 100%;
-    height: 10%;
+    height: 40px;
     padding: 0 10px;
+}
+.sticky-note .header svg{
+    z-index: 4;
 }
 .sticky-note .header svg:last-child{
     width: 17px;
@@ -25,4 +34,45 @@
     outline: none;
     padding: 10px 20px;
     scrollbar-width: none;
+}
+.corners, .edges{
+    position: absolute;
+    opacity: 0  ;
+}
+.corners{
+    background-color: blue;
+    width:var(--corner-thicknes);
+    height: var(--corner-thicknes);
+
+}
+.corner-top{
+    top: 0;
+}
+.corner-bottom{
+    bottom: 0;
+}
+.corner-right{
+    right: 0;
+}
+.corner-left{
+    left: 0;
+}
+.edge-y{
+    background-color: red;
+    width: var(--edge-length);
+    height: var(--edge-thickness);
+    cursor: n-resize;
+}
+.edge-x{
+    background-color: green;
+    height: var(--edge-length);
+    width: var(--edge-thickness);
+    cursor: e-resize;
+
+}
+.edge-right{
+    right: 0;
+}
+.edge-bottom{
+    bottom:0;
 }
