@@ -1,60 +1,48 @@
 :root{
-    --primary-100:#7D6CBF;
-    --primary-200:#ae9af2;
-    --primary-300:#fffeff;
-    --accent-100:#A68EDD;
-    --accent-200:#47367b;
+    --primary-100:#6A00FF;
+    --primary-200:#a64aff;
+    --primary-300:#ffb1ff;
+    --accent-100:#00E5FF;
+    --accent-200:#00829b;
     --text-100:#FFFFFF;
     --text-200:#e0e0e0;
-    --bg-100:#2C264F;
-    --bg-200:#3d3660;
-    --bg-300:#574e7b;   
-    --faded-bg:#0000006d;
+    --bg-100:#1A1A1A;
+    --bg-200:#292929;
+    --bg-300:#404040;
+      
+    --faded-black:#00000045;
+    --faded-grey:#3f3f3f27;
+      
 }
+
 body{
     background-color: var(--bg-100);
 }
+
 div{
     color:var(--text-100);
 }
-header{
-    background-color: var(--bg-200);
-    box-shadow: 1px 1px 9px 0px var(--faded-bg);
-}
-.focus-header-nav{
-    border-color: var(--primary-300);
-}
-svg{
-    fill: var(--primary-300);
-}
-.nav-items{
-    background-color: var(--bg-200);
-}
-.nav-item{
-    color: var(--text-200);
-    fill: var(--text-200);
-}
-.nav-item:is(:hover,:focus,:focus-within) :is(div,svg), .nav-item:is(:hover,:focus,:focus-within){
-    color: var(--primary-100);
-    fill: var(--primary-100);
-
-}
-@media only screen and (max-width:642px){
-    .header-nav{
-        background-color: var(--faded-bg);
-    }
-    
-}
 .sidebar{
     background-color: var(--bg-200);
-    z-index: -1;
-    box-shadow: 1px 1px 6px 0px var(--faded-bg);
+}
+.sidebar .nav-item svg{
+    fill:var(--primary-100)
+}
+.sidebar .nav-item:hover{
+    background-color: var(--bg-300);
+}
+.sidebar .nav-item:hover svg{
+    fill: var(--accent-100);
+}
 
+.focus-nav{
+    border-bottom: 1px solid var(--accent-100);
+    border-radius: 5px;
 }
-.sidebar svg{
-    fill: var(--text-100);
-    width: 25px;
+.sidebar .focus-nav:hover svg{
+    fill: var(--primary-100);
 }
-.home-nav .heading{
-    color: var(--accent-100);
+.sidebar .focus-nav:hover{
+    background-color: inherit;
+    cursor: default;
 }

@@ -1,36 +1,21 @@
-const headerNav = document.querySelector(".header-nav")
-const navItems = document.querySelectorAll(".header-nav .nav-item")
-const [homeNav] = navItems
-const navItemsArr = Array.from(navItems)
-console.log("it works")
+const navItems = document.querySelectorAll(".sidebar .nav-item")
+const sections = document.querySelectorAll("#main-container .section")
 
-function toggleMyClass(myClass, ...more){
-    more.forEach(el=>el.classList.toggle(myClass))
-}
-function removeMyClass(myClass, el){
-    el.classList.remove(myClass)
-    
-}
-function addMyClass(myClass, el){
-    el.classList.add(myClass)
 
-}
-function changeNavItems(el){
-    navItemsArr.filter(item=>item !== el).forEach(item=>removeMyClass("focus-header-nav",item))
-    addMyClass("focus-header-nav",el)
-}
-navItemsArr.forEach(item=>
-    item.addEventListener("click",(e)=>{
-        changeNavItems(e.target)
-    })
-)
-document.querySelector(".logo").addEventListener("click",()=>{changeNavItems(homeNav)})
-document.querySelector(".menu").addEventListener("click",()=>{
-    toggleMyClass("res-nav",headerNav)
-})
-window.onclick = event=>{
-    if(event.target === headerNav){
-        toggleMyClass("res-nav",headerNav)
-        
+navItems.forEach(navItem=>navItem.addEventListener("click",e=>changeNavItem(navItem)))
+function changeNavItem(e){
+    if(e===document.querySelector(".sidebar #stickynote")){
+        return
     }
+    navItems.forEach(navItem=>{
+        navItem.classList.remove("focus-nav")
+    })
+    e.classList.add("focus-nav")
+    sections.forEach(section=>{
+        section.classList.add("hidden")
+        if(section.classList.contains(`${e.id}`)){
+            section.classList.remove("hidden")
+            
+        }
+    })
 }
