@@ -37,7 +37,6 @@
     opacity: 0  ;
 }
 .corners{
-    background-color: blue;
     width:var(--corner-thicknes);
     height: var(--corner-thicknes);
 
@@ -55,13 +54,11 @@
     left: 0;
 }
 .edge-y{
-    background-color: red;
     width: var(--edge-length);
     height: var(--edge-thickness);
     cursor: n-resize;
 }
 .edge-x{
-    background-color: green;
     height: var(--edge-length);
     width: var(--edge-thickness);
     cursor: e-resize;

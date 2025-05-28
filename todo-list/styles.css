@@ -33,3 +33,9 @@
 #section-todo-list .todo-text{
     font-size: 1.4em;
 }
+#section-todo-list .edit-inp{
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 400px;
+}

@@ -1,14 +1,14 @@
 :root{
-    --primary-100:#005B99;
-    --primary-200:#4e88ca;
-    --primary-300:#b7e9ff;
-    --accent-100:#FFD700;
-    --accent-200:#e9aa2b;
-    --text-100:#333333;
-    --text-200:#5c5c5c;
-    --bg-100:#F5F5F5;
-    --bg-200:#ebebeb;
-    --bg-300:#c2c2c2;
+    --primary-100:#1E2022;
+    --primary-200:#34373b;
+    --primary-300:#F0F5F9;
+    --accent-100:#788189;
+    --accent-200:#e1e4e6;
+    --text-100:#1E2022;
+    --text-200:#52616B;
+    --bg-100:#F0F5F9;
+    --bg-200:#C9D6DF;
+    --bg-300:#bfc7d1;
       
     --faded-black:#00000045;
     --faded-grey:#3f3f3f27;
@@ -67,19 +67,18 @@ div{
     color: var(--bg-100);
 }
 .sticky-note{
-    box-shadow: 1px 1px 10px 1px ;
+    box-shadow: 1px 1px 10px 1px black;
 }
-.sticky-note .header{
+:is(.sticky-note,.notepad) .header{
     background-color: var(--primary-100);
 }
-.sticky-note .header svg{
+:is(.sticky-note,.notepad) .header svg{
     fill: var(--accent-100);
 }
 
 textarea{
-    padding: 17px;
     background-color: var(--bg-300);
-    color: var(--text-100);
+    color: var(--text-200);
 }
 .tooltip{
     background-color: var(--text-100);
@@ -94,4 +93,7 @@ textarea{
 }
 #section-todo-list .btn:hover{
     background-color: var(--primary-200);
+}
+#section-notepad .title{
+    color: var(--accent-100);
 }
