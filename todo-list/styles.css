@@ -1,0 +1,35 @@
+#section-todo-list .btn{
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: .8em;
+    cursor: pointer;
+    transition: 1s;
+}
+#section-todo-list .controls{
+    padding: 20px;
+}
+#section-todo-list .btn-section{
+    display: grid;
+    place-content: center;
+}
+#section-todo-list li{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+
+    transition: 1s;
+}
+#section-todo-list :is(.edit-btn,.cancel-btn){
+    border-radius: 20px 0 0 20px;
+}
+#section-todo-list :is(.save-btn,.delete-btn){
+    border-radius: 0 20px 20px 0;
+}
+#section-todo-list .check-inp{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#section-todo-list .todo-text{
+    font-size: 1.4em;
+}

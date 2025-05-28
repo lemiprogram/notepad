@@ -1,34 +1,33 @@
 
-let z = 1
+let z = 6
 const addSticky = document.querySelector("#stickynote")
   
 class StickyNote{
-    constructor(){
+    constructor(){ 
         this.stickyNote = document.createElement("div")
-        this.stickyNote.classList.add(`sticky-note`,`top-[0]`, `left-[${Math.floor(Math.random() * 50)}]`, `relative`,`flex`, `flex-col`)
+        this.stickyNote.classList.add(`sticky-note`,'top-[20%]','right-[30%]',`relative`,`flex`, `flex-col`)
         this.stickyNote.innerHTML = `
-                                <div class="header flex justify-between">
-                                    <div class="grid place-content-center sticky-add">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
-                                    </div>
-                                    <div class="grid place-content-center sticky-close">
-                                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                                    </div>
-                                </div>
-                                    
-                                </div>
-                                <textarea class="sticky-text" placeholder="Take a note..."></textarea>
-                                    <div class="resizable edges edge-y edge-top"></div>
-                                    <div class="resizable edges edge-y edge-bottom"></div>
-                                    <div class="resizable edges edge-x edge-right"></div>
-                                    <div class="resizable edges edge-x edge-left"></div>
-                                    <div class="resizable corners cursor-nw-resize corner-top corner-left"></div>
-                                    <div class="resizable corners cursor-ne-resize corner-top corner-right"></div>
-                                    <div class="resizable corners cursor-nw-resize corner-bottom corner-right"></div>
-                                    <div class="resizable corners cursor-ne-resize corner-bottom corner-left"></div>
-                               
-                                 
-                    `
+
+             <div class="header flex justify-between">
+                <div class="grid place-content-center sticky-add">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                </div>
+                <div class="grid place-content-center sticky-close">
+                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </div>
+             </div>
+             <textarea class=" h-full  resize-none outline-none" placeholder="Take a note..."> </textarea>
+             <div class="resizable edges edge-y edge-top"></div>
+             <div class="resizable edges edge-y edge-bottom"></div>
+             <div class="resizable edges edge-x edge-right"></div>
+             <div class="resizable edges edge-x edge-left"></div>
+             <div class="resizable corners cursor-nw-resize corner-top corner-left"></div>
+             <div class="resizable corners cursor-ne-resize corner-top corner-right"></div>
+             <div class="resizable corners cursor-nw-resize corner-bottom corner-right"></div>
+             <div class="resizable corners cursor-ne-resize corner-bottom corner-left"></div>
+             
+        `
+       
         this.stickyNote.addEventListener("mousedown",(e)=>{
             if(e.target === this.stickyNote.querySelector(".sticky-close") || e.target === this.stickyNote.querySelector(".sticky-close svg") || e.target === this.stickyNote.querySelector(".sticky-close svg path")){
                 this.stickyNote.remove()
@@ -130,24 +129,9 @@ class StickyNote{
                 document.addEventListener("mousemove",drag)
                 document.addEventListener("mouseup",mouseUp)
     }
-    bold(event){
-        
-        this.stickyNote.querySelector("textarea").classList.toggle("font-bold")
-        event.target.parentElement.classList.toggle("highlight")
-    }
-    italics(event){
-        console.log("its Working")
-        this.stickyNote.querySelector("textarea").classList.toggle("italic")
-        event.target.parentElement.classList.toggle("highlight")
-    }
-    underline(event){
-        console.log("its Working")
-        this.stickyNote.querySelector("textarea").classList.toggle("underline")
-        event.target.parentElement.classList.toggle("highlight")
-    }
     addSticky(){
         const stickyNote = new StickyNote();
-        document.querySelector(".sticky-note-view").appendChild(stickyNote.stickyNote)
+        document.querySelector("#main-container").appendChild(stickyNote.stickyNote)
     }
     
 }
@@ -155,5 +139,5 @@ class StickyNote{
 
 addSticky.addEventListener("mousedown",()=>{
     const stickyNote = new StickyNote();
-    document.querySelector(".sticky-note-view").appendChild(stickyNote.stickyNote)
+    document.querySelector("#main-container").appendChild(stickyNote.stickyNote)
 })
